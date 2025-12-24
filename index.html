@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Total Fabric - Merry Christmas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas&family=Playfair+Display:wght@700;900&family=Cinzel:wght@600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Playfair Display', serif;
+            background: url("https://images.unsplash.com/photo-1674859146251-53c7c74a76fd?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c2FudGElMjBjbGF1c3xlbnwwfHwwfHx8MA%3D%3D");
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.3);
+            z-index: 1;
+        }
+        
+        .content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 350px;
+            width: 100%;
+        }
+        
+        .greeting {
+            font-family: 'Mountains of Christmas', cursive;
+            font-size: 3.5rem;
+            color: #fff;
+            text-shadow: 
+                3px 3px 0px #DC143C,
+                6px 6px 10px rgba(0, 0, 0, 0.8),
+                0 0 20px rgba(255, 255, 255, 0.5);
+            margin-bottom: 20px;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes glow {
+            from { text-shadow: 3px 3px 0px #DC143C, 6px 6px 10px rgba(0, 0, 0, 0.8), 0 0 20px rgba(255, 255, 255, 0.5); }
+            to { text-shadow: 3px 3px 0px #DC143C, 6px 6px 10px rgba(0, 0, 0, 0.8), 0 0 30px rgba(255, 255, 255, 0.8); }
+        }
+        
+        .from-text {
+            font-family: 'Mountains of Christmas', cursive;
+            font-size: 1.8rem;
+            color: #FFD700;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+            margin-bottom: 30px;
+            letter-spacing: 2px;
+        }
+        
+        .company-name {
+            font-family: 'Mountains of Christmas', cursive;
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #FFD700;
+            text-shadow: 
+                2px 2px 0px #8B0000,
+                4px 4px 0px #DC143C,
+                6px 6px 12px rgba(0, 0, 0, 0.8);
+            letter-spacing: 4px;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+        }
+        
+        .decorations {
+            font-size: 2.5rem;
+            margin: 20px 0;
+        }
+        
+        .decorations span {
+            display: inline-block;
+            margin: 0 10px;
+            animation: bounce 2s ease-in-out infinite;
+        }
+        
+        .decorations span:nth-child(1) { animation-delay: 0s; }
+        .decorations span:nth-child(2) { animation-delay: 0.3s; }
+        .decorations span:nth-child(3) { animation-delay: 0.6s; }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-15px); }
+            60% { transform: translateY(-8px); }
+        }
+        
+        .year {
+            background: rgba(255, 255, 255, 0.9);
+            color: #8B4513;
+            padding: 10px 25px;
+            border-radius: 25px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            display: inline-block;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            margin-top: 20px;
+        }
+        
+        .snowflake {
+            position: absolute;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.2rem;
+            animation: fall linear infinite;
+            z-index: 3;
+        }
+        
+        @keyframes fall {
+            0% { 
+                transform: translateY(-100vh) rotate(0deg);
+                opacity: 1;
+            }
+            100% { 
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0.3;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .greeting {
+                font-size: 2.8rem;
+            }
+            
+            .company-name {
+                font-size: 2.2rem;
+                letter-spacing: 2px;
+            }
+            
+            .from-text {
+                font-size: 1.5rem;
+            }
+            
+            .decorations {
+                font-size: 2rem;
+            }
+            
+            .year {
+                font-size: 1.3rem;
+                padding: 8px 20px;
+            }
+        }
+        
+        @media (max-width: 320px) {
+            .greeting {
+                font-size: 2.4rem;
+            }
+            
+            .company-name {
+                font-size: 1.8rem;
+            }
+            
+            .from-text {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="greeting">Merry Christmas</div>
+        
+        <div class="from-text">FROM</div>
+        
+        <div class="company-name">TOTAL FABRIC</div>
+        
+        <div class="decorations">
+            <span>🎄</span>
+            <span>🎅</span>
+            <span>🎁</span>
+        </div>
+    </div>
+    
+    <script>
+        function createSnowflakes() {
+            const snowflakes = ['❄', '❅', '✦', '✧', '⋆', '✱'];
+            
+            for (let i = 0; i < 40; i++) {
+                const snowflake = document.createElement('div');
+                snowflake.className = 'snowflake';
+                snowflake.innerHTML = snowflakes[Math.floor(Math.random() * snowflakes.length)];
+                snowflake.style.left = Math.random() * 100 + '%';
+                snowflake.style.animationDuration = (Math.random() * 4 + 3) + 's';
+                snowflake.style.animationDelay = Math.random() * 2 + 's';
+                snowflake.style.fontSize = (Math.random() * 0.8 + 0.8) + 'rem';
+                document.body.appendChild(snowflake);
+            }
+        }
+        
+        createSnowflakes();
+    </script>
+</body>
+</html>
